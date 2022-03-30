@@ -1,5 +1,5 @@
 """
- Copyright (c) 2021 Intel Corporation
+ Copyright (c) 2022 Intel Corporation
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -117,7 +117,7 @@ class ConvolutionLayerAttributes(WeightedLayerAttributes):
                  stride: Tuple[int, ...],
                  groups: int,
                  transpose: bool,
-                 padding_values: List[int]):
+                 padding_values: Tuple[int, ...]):
         super().__init__(weight_requires_grad)
         self.in_channels = in_channels
         self.out_channels = out_channels

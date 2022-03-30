@@ -1,5 +1,5 @@
 """
- Copyright (c) 2021 Intel Corporation
+ Copyright (c) 2022 Intel Corporation
  Licensed under the Apache License, Version 2.0 (the "License");
  you may not use this file except in compliance with the License.
  You may obtain a copy of the License at
@@ -40,6 +40,10 @@ class TensorStatisticCollectorBase(ABC):
         self._enabled = True
         self._collected_samples = 0
         self._num_samples = num_samples
+
+    @property
+    def num_samples(self) -> int:
+        return self._num_samples
 
     def register_input(self, x: TensorType) -> TensorType:
         """Registers input tensor"""
