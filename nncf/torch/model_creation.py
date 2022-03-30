@@ -247,3 +247,4 @@ def create_compression_algorithm_builder_from_algo_names(algo_names: List[str],
     else:
         builder = PTCompositeCompressionAlgorithmBuilder(config, should_init=should_init)
     return builder
+
